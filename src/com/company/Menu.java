@@ -3,11 +3,9 @@ package com.company;
 import java.util.Date;
 
 public class Menu {
-    private MenuItem[] menuItems;
     private Date lastUpdated;
 
-    public Menu(MenuItem[] menuItems, Date lastUpdated) {
-        this.menuItems = menuItems;
+    public Menu(Date lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
 

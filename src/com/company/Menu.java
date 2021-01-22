@@ -1,19 +1,21 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Menu {
     private Date lastUpdated;
+    private ArrayList<MenuItem> menuItems;
 
     public Menu(Date lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
 
-    public MenuItem[] getMenuItems() {
+    public ArrayList<MenuItem> getMenuItems() {
         return menuItems;
     }
 
-    public void setMenuItems(MenuItem[] menuItems) {
+    public void setMenuItems(ArrayList<MenuItem> menuItems) {
         this.menuItems = menuItems;
     }
 
@@ -24,4 +26,5 @@ public class Menu {
     public void setLastUpdated(Date lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
+
 }

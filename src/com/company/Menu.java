@@ -9,6 +9,7 @@ public class Menu {
 
     public Menu(Date lastUpdated) {
         this.lastUpdated = lastUpdated;
+        this.menuItems = new ArrayList<>();
     }
 
     public ArrayList<MenuItem> getMenuItems() {
@@ -27,4 +28,28 @@ public class Menu {
         this.lastUpdated = lastUpdated;
     }
 
+    public void addMenuItem(MenuItem newItem) {
+        for (MenuItem item : this.menuItems){
+            if (item.equals(newItem)) {
+                System.out.println("This item already exists on the menu!");
+                return;
+            }
+        }
+        this.menuItems.add(newItem);
+    }
+
+    public void removeMenuItem(MenuItem itemToRemove) {
+        for(int i = 0; i < menuItems.size(); i ++) {
+            if (menuItems.get(i).equals(itemToRemove)) {
+                this.menuItems.remove(i);
+                break;
+            }
+        }
+    }
+
+    public void printMenu() {
+        for (MenuItem item : menuItems) {
+            item.print();
+        }
+    }
 }
